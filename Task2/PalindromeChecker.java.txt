@@ -1,0 +1,50 @@
+package com.Level1Tasks;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class PalindromeChecker  {
+	
+	public static void main(String[]args)
+	{
+		try
+		{
+			System.out.println("Level-1 Task-2");
+			System.out.println("Palindrome Checker");
+                        System.out.println("===================");
+		InputStreamReader is=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(is);
+		System.out.println("Enter the word or phrase");
+		String word=br.readLine();
+		
+		String word1=word.replaceAll("[^/a-zA-Z]", "").toLowerCase();
+		
+		boolean isword=true;
+		
+		for(int i=0,j=word1.length()-1;i<j;i++,j--)
+		{
+			if(word1.charAt(i)!=word1.charAt(j))
+			{
+				isword=false;
+			}
+		}
+		
+		if(isword)
+		{
+			System.out.println("Is a palindrome");
+		}
+		else {
+			System.out.println("Is not a palindrome");
+		}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+
+	
+	
+
+}
